@@ -24,7 +24,7 @@ public class Tree {
         try {
             if (tree[i].equals(num)) {
                 System.out.println(output);
-                output.substring(0, 9);
+                output.delete(9, output.length());
             } else if (tree[i].compareTo(num) > 0) {
                 i = 2 * i + 1;
                 output.append("go left, ");
@@ -36,7 +36,7 @@ public class Tree {
             }
         }catch (NullPointerException e){
             System.out.println("There no this element");
-            output.substring(0, 9);
+            output.delete(9, output.length());
         }
 
     }
