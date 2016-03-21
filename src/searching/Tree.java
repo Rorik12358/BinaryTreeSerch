@@ -1,12 +1,10 @@
 package searching;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by R2-D2 on 20.03.2016.
  */
 public class Tree {
+    static StringBuilder output = new StringBuilder("founded: ");
     // Make up binary tree:
     /*
                    15
@@ -18,11 +16,9 @@ public class Tree {
      */
     private static Integer[] tree = {15,12,17,7,13,16,18,5,null,null,14,null,null,null,20,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,};
 
-
     public static Integer[] getTree() {
         return tree;
     }
-    static StringBuilder output = new StringBuilder("founded: ");
 
     public static void search(Integer num, int i){
         try {
@@ -40,6 +36,7 @@ public class Tree {
             }
         }catch (NullPointerException e){
             System.out.println("There no this element");
+            output.substring(0, 9);
         }
 
     }
